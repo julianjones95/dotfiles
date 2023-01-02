@@ -3,7 +3,8 @@
 "
 
 
-"Formatting Stuff
+""" 1. Formatting Stuff
+
 set number relativenumber
 set tabstop=4
 set termguicolors
@@ -16,7 +17,25 @@ let &t_EI = "\e[2 q"
 set wildmode=longest,list,full
 
 
-" open file vertically to the right inside netrw:
+
+""" 2. NerdTree Formatting  
+
+let g:netrw_preview = 1
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 15
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+  " autocmd VimEnter * if &ft!~?''| wincmd w
+augroup END
+
+
+
+"""" 3. Function to open file vertically to the right inside netrw:
+
 augroup netrw_mappings
     autocmd!
     autocmd filetype netrw call Netrw_mappings()
@@ -28,12 +47,28 @@ function! OpenToRight()
   :60winc >
 endfunction
 
-" Netrw Key Mappings
+
+
+"""" 4. Netrw Key Mappings
+
 function! Netrw_mappings()
+  
+  " Moving through netrw with h and l keys
   nmap <buffer> h -^
   nmap <buffer> l <CR>
+
+  " Swapping Splits
+  nmap <C-h> <C-w>h
+  nmap <C-j> <C-w>j
+  nmap <C-k> <C-w>k
+  nmap <C-l> <C-w>l
+
+  " Swap j and k keys for navigation
   noremap k j|noremap <C-w>k <C-w>j|noremap <C-w><C-k> <C-w>j
   noremap j k|noremap <C-w>j <C-w>k|noremap <C-w><C-j> <C-w>k
   noremap ' :call OpenToRight()<cr>
 
 endfunction
+
+
+
