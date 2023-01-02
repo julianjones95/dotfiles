@@ -17,7 +17,6 @@ let &t_EI = "\e[2 q"
 set wildmode=longest,list,full
 
 
-
 """ 2. NerdTree Formatting  
 
 let g:netrw_preview = 1
@@ -26,10 +25,18 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
+
+" This function will jump to the split to edit if a file is opened ex: vim Example.txt will put the cursor on line 1
+function! EnterFile()
+    if !(argc() == 1 && isdirectory(argv()[0]))
+        execute "wincmd p"
+    endif
+endfunction
+
 augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * :Vexplore
-  " autocmd VimEnter * if &ft!~?''| wincmd w
+  autocmd VimEnter * :call EnterFile()
 augroup END
 
 
@@ -49,7 +56,7 @@ endfunction
 
 
 
-"""" 4. Netrw Key Mappings
+"""" 5. Netrw Key Mappings
 
 function! Netrw_mappings()
   
