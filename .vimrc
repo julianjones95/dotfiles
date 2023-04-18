@@ -18,8 +18,8 @@ let &t_EI = "\e[2 q"
 set wildmode=longest,list,full
 
 
-""" 2. NerdTree Formatting  
 
+<<<<<<< HEAD
 """				let g:netrw_preview = 1
 """				let g:netrw_banner = 0
 """				let g:netrw_liststyle = 3
@@ -58,6 +58,9 @@ set wildmode=longest,list,full
 
 
 """" 5. Netrw Key Mappings
+=======
+"""" 2. Netrw Key Mappings
+>>>>>>> 227c353cf8e9ef731cb6d88af58737fd7bfa8b92
 
 function! Netrw_mappings()
   
@@ -78,7 +81,11 @@ function! Netrw_mappings()
 
 endfunction
 
+<<<<<<< HEAD
 """" 6. QuicKTab Navigation
+=======
+"""" 3. QuicKTab Navigation
+>>>>>>> 227c353cf8e9ef731cb6d88af58737fd7bfa8b92
 
   cnoreabbrev <expr> tn getcmdtype() == ":" && getcmdline() == 'tn' ? 'tabnew' : 'tn'
 
