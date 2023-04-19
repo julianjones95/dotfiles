@@ -9,7 +9,7 @@ set number relativenumber
 set tabstop=2
 set shiftwidth=0
 set termguicolors
-set cursorline
+"set cursorline
 "set cursorcolumn
 syntax on
 set re=0 " Solves a syntax highlighting bug here: https://github.com/prabirshrestha/vim-lsp/issues/786
