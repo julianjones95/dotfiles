@@ -13,14 +13,12 @@ Once this directory is cloned from github you will need to run the `createLinks.
 will create symbolic links to all of the config files and avoids mess of actually going into the private dot files. I 
 found this idea [here](https://superuser.com/questions/152574/keeping-my-zsh-or-bash-profile-synced-up-on-all-my-machines#answer-152600). 
 
-Commands:
+Commands to run after downloading packages:
 
     1. `chmod 777 createSymLinks.sh`
     2. `./createLinks.sh`
 
 ## Text Editor Setup (NVIM)
-
-#### Justification 
 
 I prefer to use neovim as my text editor. The usefulness of having some of the neovim plugins allow extra speed 
 and shortcuts during development. Syntax highlighting inside NVIM as well as auto suggestion are useful and 
@@ -34,17 +32,21 @@ allow me to continually get faster using vim.
 
 ## Commandline Shell (ZSH)
 
-#### Justification 
+I have been using zsh for almost 10 years so without realizing it I got quite comfortable. After trying out OMZ the git branch indicators and
+git status indicators were really helpful. Syntax highlighting, and autosuggest were also useful plugins.
 
 #### Setup
 
-1. Download NVIM
-2. download telescope 
+1. Check to see the current shell: `echo $SHELL`
+2. If not downloaded download zsh. You can check the version by running `zsh --version`
+3. Change shell to zsh: `chsh -s $(which zsh)`
+
+1. Download oh my zsh: `sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"`
+2. download syntax highlighting: `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting` 
+3. download: powerlevel10k; `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 
 
 ## Windows Manager (TMUX)
-
-#### Justification 
 
 Tmux is a staple in my workflow. The necessity to have multiple terminals running software can be hard to manage. 
 Using Tmux makes managing this in one window fast and simple. I often split my windows into 4 usually with nvim and 
@@ -53,17 +55,13 @@ terminals for compilation.
 #### Setup
 
 1. Download TMUX
-2. download telescope 
 
 
 ## Terminal Emulator (iTerm2)
-
-#### Justification 
 
 iTerm2 is useful as this allows great formatting. As well as a useful history of syntax completion and many other useful features.
 
 #### Setup
 
-1. Download NVIM
-2. download telescope 
+1. Download iTerm2
 
