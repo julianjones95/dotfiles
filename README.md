@@ -1,6 +1,6 @@
-# My dotfiles
+# My Development Environment
 
-### Overview 
+### Justification 
 
 Creating an optimized development is important. When switching to a new machine it can be difficult or tedious 
 to have to re-download and setup everything. This is a handy configuration which allows automation of dotfiles.
@@ -9,30 +9,61 @@ needed for an optimal dev env.
 
 ### Setup
 
-The setup here is fairly simple. Once this directory is cloned you will need to run the `createLinks.sh` script. This
+Once this directory is cloned from github you will need to run the `createLinks.sh` script. This
 will create symbolic links to all of the config files and avoids mess of actually going into the private dot files. I 
 found this idea [here](https://superuser.com/questions/152574/keeping-my-zsh-or-bash-profile-synced-up-on-all-my-machines#answer-152600). 
 
 Commands:
 
-    1. `chmod 777 createLinks.sh`
+    1. `chmod 777 createSymLinks.sh`
     2. `./createLinks.sh`
 
+## Text Editor Setup (NVIM)
 
-## My Preferred VIM (NVIM) Text Editor Layout
+#### Justification 
 
-#### Overview 
-
-This is a simple configuration file for setting up a .vimrc setup file. The usefulness 
-is that instead of consistently needing to change my .vimrc manually I can pull this config
-via [this repository](https://github.com/julianjones95/vimrc). Feel free to use this repo.
+I prefer to use neovim as my text editor. The usefulness of having some of the neovim plugins allow extra speed 
+and shortcuts during development. Syntax highlighting inside NVIM as well as auto suggestion are useful and 
+allow me to continually get faster using vim.
 
 #### Setup
 
-To set this up all you need is to copy the text from .vimrc into your .vimrc file. Commands 
-for this are as follows:
+1. Download NVIM
+2. download telescope 
 
-1. Run the command `vim ~/.vimrc`
-2. Take the contents from here: [.vimrc](https://github.com/julianjones95/vimrc/blob/master/.vimrc) 
-3. Paste them into the file and close the file (:wq)
-4. Observe the changes inside vim 
+
+## Commandline Shell (ZSH)
+
+#### Justification 
+
+#### Setup
+
+1. Download NVIM
+2. download telescope 
+
+
+## Windows Manager (TMUX)
+
+#### Justification 
+
+Tmux is a staple in my workflow. The necessity to have multiple terminals running software can be hard to manage. 
+Using Tmux makes managing this in one window fast and simple. I often split my windows into 4 usually with nvim and 
+terminals for compilation.
+
+#### Setup
+
+1. Download TMUX
+2. download telescope 
+
+
+## Terminal Emulator (iTerm2)
+
+#### Justification 
+
+iTerm2 is useful as this allows great formatting. As well as a useful history of syntax completion and many other useful features.
+
+#### Setup
+
+1. Download NVIM
+2. download telescope 
+
