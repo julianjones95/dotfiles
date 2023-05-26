@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/Users/julianjones/depot_tools:$PATH
 alias gm=/Users/julianjones/Business/v8/v8/tools/dev/gm.py
 alias bim='(cd /Users/julianjones/Business/Blog/post-editor && go run .)'
-alias v=nvim
+alias vv=nvim
 alias python=python3
 alias pip=pip3
 

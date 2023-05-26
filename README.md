@@ -26,7 +26,6 @@ allow me to continually get faster using vim.
 
 #### Setup
 
-
 1. Get the most recent version of neovim. If your package manager gives you problems follow the github repo and compile from source.
 2. Everything should auto download via packer and the config from `init.lua`
 

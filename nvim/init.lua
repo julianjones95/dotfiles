@@ -1,3 +1,11 @@
+--[[
+
+=====================================================================
+=================== Julian's Neovim Configuration ===================
+=====================================================================
+
+]]--
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -74,11 +82,12 @@ require('lazy').setup({
     },
   },
 
-  { -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+  { -- Theme is a light pastel theme 
+    'catppuccin/nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.opt.termguicolors = true
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
 
@@ -146,11 +155,14 @@ require('lazy').setup({
   --
   --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
- -- { import = 'custom.plugins' },
- }, {})
+--  { import = 'custom.plugins' },
+}, {})
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
+
+-- Turn on relative line numbers
+vim.wo.relativenumber = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -194,15 +206,15 @@ vim.o.termguicolors = true
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
---vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
---vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
---vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
---[[ local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
     vim.highlight.on_yank()
@@ -210,7 +222,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-]]--
+
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
@@ -315,6 +327,20 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
+
+-- The following commands were built for speed in mind. Enabling myself 
+-- to type fast and move fast naturally gets me into an engaged state:
+
+-- Shortcut to create a new tab
+vim.keymap.set('n','tt', ':tabnew ')
+
+-- Shortcut to Telescope find files 
+vim.keymap.set('n','ttt', ':Telescope find_files ')
+
+-- Shortcut to Telescope find files 
+vim.keymap.set('n','tttt', ':Telescope fzf ')
+
 
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
@@ -452,4 +478,3 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
