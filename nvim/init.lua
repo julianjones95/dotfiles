@@ -333,13 +333,13 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagn
 -- to type fast and move fast naturally gets me into an engaged state:
 
 -- Shortcut to create a new tab
-vim.keymap.set('n','tt', ':tabnew ')
+vim.keymap.set('n','vv', ':tabnew . ')
 
 -- Shortcut to Telescope find files 
-vim.keymap.set('n','ttt', ':Telescope find_files ')
+vim.keymap.set('n','vvv', ':Telescope find_files ')
 
 -- Shortcut to Telescope find files 
-vim.keymap.set('n','tttt', ':Telescope fzf ')
+vim.keymap.set('n','vvvv', ':Telescope fzf ')
 
 
 -- LSP settings.
