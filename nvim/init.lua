@@ -13,7 +13,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require("plugins")
-require("luasnip.loaders.from_vscode").lazy_load()
+--require("luasnip.loaders.from_vscode").lazy_load()
 require("settings")
 require("keymaps")
 require("tscope")
