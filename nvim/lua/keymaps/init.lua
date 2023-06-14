@@ -40,3 +40,9 @@ vim.keymap.set('n','vvv', ':Telescope find_files ')
 vim.keymap.set('n','vvvv', ':Telescope fzf ')
 
 
+-- Movement for touch typing
+vim.api.nvim_set_keymap('n', 'K', '{', { silent = true })
+vim.api.nvim_set_keymap('n', 'J', '}', { silent = true })
+vim.api.nvim_set_keymap('n', 'L', 'W', { silent = true })
+vim.api.nvim_set_keymap('n', 'H', 'B', { silent = true })
+
