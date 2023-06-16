@@ -39,10 +39,12 @@ vim.keymap.set('n','vvv', ':Telescope find_files ')
 -- Shortcut to Telescope find files 
 vim.keymap.set('n','vvvv', ':Telescope fzf ')
 
-
--- Movement for touch typing
+-- Movement for selection and touch typing using VIM hjkl
+vim.api.nvim_set_keymap('v', 'K', '{', { silent = true })
+vim.api.nvim_set_keymap('v', 'J', '}', { silent = true })
 vim.api.nvim_set_keymap('n', 'K', '{', { silent = true })
 vim.api.nvim_set_keymap('n', 'J', '}', { silent = true })
 vim.api.nvim_set_keymap('n', 'L', 'w', { silent = true })
 vim.api.nvim_set_keymap('n', 'H', 'b', { silent = true })
-
+vim.api.nvim_set_keymap('v', 'L', 'w', { silent = true })
+vim.api.nvim_set_keymap('v', 'H', 'b', { silent = true })
