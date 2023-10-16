@@ -76,7 +76,7 @@ require('lazy').setup({
     end,
     init = function()
 	       -- Set configuration options here
-        vim.g["conjure#debug"] = true
+        vim.g["conjure#debug"] = false
     end,
 },
   -- Useful plugin to show you pending keybinds.
