@@ -31,8 +31,10 @@ allow me to continually get faster using vim.
 
 ## Commandline Shell (ZSH)
 
-I have been using zsh for almost 10 years so without realizing it I got quite comfortable. After trying out OMZ the git branch indicators and
-git status indicators were really helpful. Syntax highlighting, and autosuggest were also useful plugins.
+I have been using zsh for almost 10 years so without realizing it I got 
+comfortable. After trying out OMZ the git branch indicators and
+git status indicators were really helpful. Syntax highlighting, and autosuggest
+were also useful plugins.
 
 #### Setup
 
