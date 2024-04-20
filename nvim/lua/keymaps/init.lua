@@ -33,6 +33,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagn
 -- Shortcut to create a new tab
 vim.keymap.set('n','vv', ':tabnew . ')
 
+-- Shortcut to suspend the current instance of nvim
+vim.keymap.set('n','fg', ':suspend ')
+
 -- Shortcut to Telescope find files 
 vim.keymap.set('n','vvv', ':Telescope find_files ')
 
