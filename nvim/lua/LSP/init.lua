@@ -1,6 +1,10 @@
 local lsp = require('lsp-zero').preset({})
 
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 lsp.on_attach(function(client, bufnr)
+  capabilities = capabilities,
   lsp.default_keymaps({buffer = bufnr})
 end)
 
