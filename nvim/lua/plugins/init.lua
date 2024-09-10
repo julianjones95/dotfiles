@@ -93,6 +93,12 @@ require('lazy').setup({
     'folke/which-key.nvim', opts = {}
   },
 
+  
+  { -- For finding references and definitions
+    -- requires ripgrep for functionality
+    'pechorin/any-jump.vim'
+  },
+
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
